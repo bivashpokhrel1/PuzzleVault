@@ -1,133 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    android:padding="24dp">
+    android:orientation="vertical"
+    android:background="#121218"
+    android:padding="16dp">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/tvHomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PuzzleVault Dashboard"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardDailyChallenge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:layout_marginBottom="12dp"
+        app:cardBackgroundColor="#1E1E2C"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textSize="32sp"
-            android:textColor="@color/primary"
-            android:textStyle="bold"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="8dp" />
-
-        <TextView
-            android:id="@+id/tvStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome to PuzzleVault"
-            android:textSize="16sp"
-            android:textColor="@color/textSecondary"
-            android:layout_marginBottom="24dp" />
-
-        <!-- Login section -->
-        <com.google.android.material.card.MaterialCardView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="@color/surface"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="4dp">
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:text="Daily Challenge"
+                android:textColor="#00E676"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Player Login"
-                    android:textSize="18sp"
-                    android:textColor="@color/primary"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="12dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solve today's generated circuit grid puzzle."
+                android:textColor="#A0A0B0"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
-                <EditText
-                    android:id="@+id/etUsername"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:hint="Enter username"
-                    android:textColor="@color/textPrimary"
-                    android:textColorHint="@color/textSecondary"
-                    android:background="@drawable/edit_text_bg"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="12dp"
-                    android:inputType="text"
-                    android:layout_marginBottom="12dp" />
-
-                <Button
-                    android:id="@+id/btnLogin"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:text="Login"
-                    android:textColor="@color/onPrimary"
-                    android:backgroundTint="@color/primary" />
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- Room info -->
-        <TextView
-            android:id="@+id/tvRoomInfo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:textColor="@color/accent"
-            android:visibility="gone"
-            android:layout_marginBottom="16dp" />
-
-        <!-- Actions -->
-        <Button
-            android:id="@+id/btnCreateRoom"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="Create Room"
-            android:textColor="@color/onPrimary"
-            android:backgroundTint="@color/primary"
-            android:layout_marginBottom="12dp" />
-
-        <Button
-            android:id="@+id/btnPuzzle"
-            style="@style/Widget.Material3.Button.OutlinedButton"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="Play Puzzles"
-            android:textColor="@color/primary"
-            android:layout_marginBottom="12dp" />
-
-        <Button
-            android:id="@+id/btnDailyChallenge"
-            style="@style/Widget.Material3.Button.TonalButton"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="Daily Challenge"
-            android:textColor="@color/onSecondary"
-            android:backgroundTint="@color/secondary"
-            android:layout_marginBottom="12dp" />
-
-        <Button
-            android:id="@+id/btnLevelEditor"
-            style="@style/Widget.Material3.Button.OutlinedButton"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="Level Editor"
-            android:textColor="@color/accent"
-            android:layout_marginBottom="12dp" />
-
-    </LinearLayout>
-
-</ScrollView>
+</LinearLayout>
