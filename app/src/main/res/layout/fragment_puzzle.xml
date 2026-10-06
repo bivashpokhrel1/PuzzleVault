@@ -216,10 +216,10 @@
                     android:textColor="@color/textSecondary"
                     android:layout_marginBottom="12dp" />
 
-                <com.jeiu.puzzlevault.ui.puzzle.RotatableWireCircuitView
+                <com.jeiu.puzzlevault.ui.puzzle.RotatableWireView
                     android:id="@+id/rotatableWireView"
                     android:layout_width="match_parent"
-                    android:layout_height="340dp"
+                    android:layout_height="320dp"
                     android:layout_marginBottom="12dp" />
 
                 <Button
